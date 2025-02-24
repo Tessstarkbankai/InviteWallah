@@ -12,6 +12,8 @@ import home from './assets/home.jpg'
 import Part from './components/Part.tsx'
 import ContactForm from './components/ContactForm.tsx';
 
+// Ayush rai is best
+
 function App() {
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
