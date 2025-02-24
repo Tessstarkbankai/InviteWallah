@@ -10,6 +10,8 @@ import { showcaseInvites } from './data/showcase';
 import { processSteps, pricingPlans } from './data/content';
 import home from './assets/home.jpg'
 
+// Ayush rai is best
+
 function App() {
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
