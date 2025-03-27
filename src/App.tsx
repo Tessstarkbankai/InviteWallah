@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Play, Star, MessageCircle, Instagram, Facebook, Twitter, Mail, Phone, PlayCircle, CheckCircle, Clock, Sparkles, Award, Heart, Gift, Calendar, Globe, MapPin, Shield, Video, Youtube, Linkedin } from 'lucide-react';
+import { Play, Star, MessageCircle, Instagram, Facebook, Twitter, Mail, Phone, PlayCircle, CheckCircle, Clock, Sparkles, Award, Heart, Gift, Calendar, Globe, MapPin, Shield, Video, Youtube,MailOpen, Linkedin } from 'lucide-react';
 import Navbar from './components/Navbar';
 import ProductModal from './components/ProductModal';
 import VideoPreviewModal from './components/VideoPreviewModal';
@@ -9,9 +9,14 @@ import { testimonials } from './data/testimonials';
 import { showcaseInvites } from './data/showcase';
 import { processSteps, pricingPlans } from './data/content';
 import home from './assets/home.jpg'
+//<<<<<<< manish
 import Crousel from './components/Crousel';
 import Printable from './components/Printable'
 import New from './components/New';
+=======
+import Part from './components/Part.tsx'
+import ContactForm from './components/ContactForm.tsx';
+//>>>>>>> main
 
 // Ayush rai is best
 
@@ -180,6 +185,9 @@ function App() {
           </div>
         </div>
       </section>
+      <section>
+        <Part/>
+      </section>
 
       {/* Crousel Section Start */}
       <Crousel 
@@ -277,7 +285,48 @@ function App() {
           </div>
         </div>
       </section>
-
+      {/* Get in Touch Section */}
+      <section id="contact" className="py-20 px-4 bg-gradient-to-br from-black to-gray-900 text-white">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl font-bold text-center mb-8">Get In Touch</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto">
+            <a
+              href="mailto:contact@invitationvideos.com"
+              className="flex flex-col items-center gap-4 p-8 rounded-xl bg-white/10 hover:bg-white/20 transition-all group"
+            >
+              <Mail size={32} className="text-white group-hover:scale-110 transition-transform" />
+              <div className="text-center" >
+                <h3 className="font-semibold mb-2">Email Us</h3>
+                <a href="mailto:name@example.com" className="text-gray-300">contact@invitationvideos.com</a>
+              </div>
+            </a>
+            
+            <a
+              href="tel:+1234567890"
+              className="flex flex-col items-center gap-4 p-8 rounded-xl bg-white/10 hover:bg-white/20 transition-all group"
+            >
+              <Phone size={32} className="text-white group-hover:scale-110 transition-transform" />
+              <div className="text-center">
+                <h3 className="font-semibold mb-2">Call Us</h3>
+                <p className="text-gray-300">+1 (234) 567-890</p>
+              </div>
+            </a>
+            
+            <a
+              href="https://wa.me/1234567890"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex flex-col items-center gap-4 p-8 rounded-xl bg-white/10 hover:bg-white/20 transition-all group"
+            >
+              <MessageCircle size={32} className="text-white group-hover:scale-110 transition-transform" />
+              <div className="text-center">
+                <h3 className="font-semibold mb-2">WhatsApp</h3>
+                <p className="text-gray-300">Message us directly</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
       {/* FAQ Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -317,50 +366,9 @@ function App() {
           </div>
         </div>
       </section>
-
-      {/* Get in Touch Section */}
-      <section id="contact" className="py-20 px-4 bg-gradient-to-br from-black to-gray-900 text-white">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-8">Get In Touch</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto">
-            <a
-              href="mailto:contact@invitationvideos.com"
-              className="flex flex-col items-center gap-4 p-8 rounded-xl bg-white/10 hover:bg-white/20 transition-all group"
-            >
-              <Mail size={32} className="text-white group-hover:scale-110 transition-transform" />
-              <div className="text-center">
-                <h3 className="font-semibold mb-2">Email Us</h3>
-                <p className="text-gray-300">contact@invitationvideos.com</p>
-              </div>
-            </a>
-            
-            <a
-              href="tel:+1234567890"
-              className="flex flex-col items-center gap-4 p-8 rounded-xl bg-white/10 hover:bg-white/20 transition-all group"
-            >
-              <Phone size={32} className="text-white group-hover:scale-110 transition-transform" />
-              <div className="text-center">
-                <h3 className="font-semibold mb-2">Call Us</h3>
-                <p className="text-gray-300">+1 (234) 567-890</p>
-              </div>
-            </a>
-            
-            <a
-              href="https://wa.me/1234567890"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex flex-col items-center gap-4 p-8 rounded-xl bg-white/10 hover:bg-white/20 transition-all group"
-            >
-              <MessageCircle size={32} className="text-white group-hover:scale-110 transition-transform" />
-              <div className="text-center">
-                <h3 className="font-semibold mb-2">WhatsApp</h3>
-                <p className="text-gray-300">Message us directly</p>
-              </div>
-            </a>
-          </div>
-        </div>
+      <section>
+        <ContactForm/>
       </section>
-
       {/* Social Media Connect Section */}
       <section className="py-16 px-4 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-7xl mx-auto">
@@ -384,6 +392,7 @@ function App() {
           </div>
         </div>
       </section>
+      
 
       {/* Footer */}
       <footer className="bg-black text-white pt-20 pb-8">
@@ -391,7 +400,7 @@ function App() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
             <div>
               <div className="flex items-center gap-2 mb-6">
-                <Video className="w-8 h-8" />
+                <MailOpen className="w-8 h-8" />
                 <span className="font-bold text-xl">InviteWallah</span>
               </div>
               <p className="text-gray-400">

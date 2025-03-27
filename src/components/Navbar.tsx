@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Video, Menu, X } from 'lucide-react';
+import { MailOpen, Menu, X } from 'lucide-react';
+
 
 interface NavbarProps {
   onNavigate: (sectionId: string) => void;
@@ -34,8 +35,8 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center gap-2">
-            <Video className="w-8 h-8" />
-            <span className="font-bold text-xl">InviteWallah</span>
+            <MailOpen className="w-8 h-8" />
+            <span className="font-bold text-xl">InvitationWala</span>
           </div>
 
           {/* Desktop Menu */}
