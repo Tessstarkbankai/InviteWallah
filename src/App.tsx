@@ -9,6 +9,9 @@ import { testimonials } from './data/testimonials';
 import { showcaseInvites } from './data/showcase';
 import { processSteps, pricingPlans } from './data/content';
 import home from './assets/home.jpg'
+import Crousel from './components/Crousel';
+import Printable from './components/Printable'
+import New from './components/New';
 
 // Ayush rai is best
 
@@ -177,6 +180,26 @@ function App() {
           </div>
         </div>
       </section>
+
+      {/* Crousel Section Start */}
+      <Crousel 
+      heading="Wedding Invites"
+      dataone = "Your wedding day is a once-in-a-lifetime celebration, and your invitations should reflect its"
+      datatwo = " beauty and uniqueness. At Invitation wala, we offer a stunning collection of wedding invites, from classic and timeless designs to modern and personalized styles."
+      />
+      <Crousel 
+      heading="Save the Date"
+      dataone = "Make your wedding announcement unforgettable with our Save the Date invitations! Designed to set the perfect tone for your big day, our digital Save the Dates are elegant, personalized, and"
+      datatwo = " crafted to match your wedding theme. we ensure every detail captures the excitement of your upcoming celebration, leaving a lasting impression on your guests."
+      />
+      <Crousel 
+      heading="Custom Story Invite"
+      dataone = "Celebrate your love story with our Custom Story Invitations, where every detail of your journey is beautifully illustrated in a personalized invite. From how you met to the big “Yes,” we bring your unique moments to life through creative designs, charming illustrations, and heartfelt"
+      datatwo = "  storytelling. Perfect for love birds who want their wedding invitation to be more than just a card, make your guests feel truly connected to your special day."
+      />
+      {/* Crousel Section End  */}
+
+      <New/>
 
       {/* Pricing Section */}
       <section className="py-20 px-4">
